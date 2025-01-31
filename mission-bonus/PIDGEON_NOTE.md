@@ -1,6 +1,6 @@
 # Pidgeon Note
 
-> The Lumenia's Merchants
+> BONUS: Secret portal
 
 ## Request
-The merchants of Lumenia want to sell their goods to the Wild Lands, but they must protect themselves from bandits. The King decrees that only merchants can communicate with Wilderness.
+A magician created a secret portal between Lumenia and Umbra, allowing communications only on port 8080.
