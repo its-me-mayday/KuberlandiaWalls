@@ -1,0 +1,63 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: citizens
+  namespace: lumenia
+  labels:
+    role: citizen
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: citizen
+  template:
+    metadata:
+      labels:
+        role: citizen
+    spec:
+      containers:
+      - name: citizen
+        image: nginx
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scholars
+  namespace: lumenia
+  labels:
+    role: scholar
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: scholar
+  template:
+    metadata:
+      labels:
+        role: scholar
+    spec:
+      containers:
+      - name: scholar
+        image: nginx
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: merchants
+  namespace: lumenia
+  labels:
+    role: merchant
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: merchant
+  template:
+    metadata:
+      labels:
+        role: merchant
+    spec:
+      containers:
+      - name: merchant
+        image: nginx

@@ -1,0 +1,42 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spies
+  namespace: umbra
+  labels:
+    role: spy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      role: spy
+  template:
+    metadata:
+      labels:
+        role: spy
+    spec:
+      containers:
+      - name: spy
+        image: nginx
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: necromancers
+  namespace: umbra
+  labels:
+    role: necromancer
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: necromancer
+  template:
+    metadata:
+      labels:
+        role: necromancer
+    spec:
+      containers:
+      - name: necromancer
+        image: nginx

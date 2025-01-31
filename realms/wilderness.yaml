@@ -1,0 +1,42 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shamans
+  namespace: wilderness
+  labels:
+    role: shaman
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      role: shaman
+  template:
+    metadata:
+      labels:
+        role: shaman
+    spec:
+      containers:
+      - name: shaman
+        image: nginx
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bandits
+  namespace: wilderness
+  labels:
+    role: bandit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      role: bandit
+  template:
+    metadata:
+      labels:
+        role: bandit
+    spec:
+      containers:
+      - name: bandit
+        image: nginx
