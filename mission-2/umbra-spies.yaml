@@ -14,4 +14,4 @@ spec:
     - from:
       - namespaceSelector:
           matchLabels:
-            name: umbra
+            kubernetes.io/metadata.name: umbra

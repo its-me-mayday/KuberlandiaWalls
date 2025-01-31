@@ -6,18 +6,15 @@ metadata:
   namespace: lumenia
   labels:
     role: citizen
-    realm: lumenia
 spec:
   replicas: 2
   selector:
     matchLabels:
       role: citizen
-      realm: lumenia
   template:
     metadata:
       labels:
         role: citizen
-        realm: lumenia
     spec:
       containers:
       - name: citizen
@@ -30,18 +27,15 @@ metadata:
   namespace: lumenia
   labels:
     role: scholar
-    realm: lumenia
 spec:
   replicas: 2
   selector:
     matchLabels:
       role: scholar
-      realm: lumenia
   template:
     metadata:
       labels:
         role: scholar
-        realm: lumenia
     spec:
       containers:
       - name: scholar
@@ -54,18 +48,15 @@ metadata:
   namespace: lumenia
   labels:
     role: merchant
-    realm: lumenia
 spec:
   replicas: 2
   selector:
     matchLabels:
       role: merchant
-      realm: lumenia
   template:
     metadata:
       labels:
         role: merchant
-        realm: lumenia
     spec:
       containers:
       - name: merchant
