@@ -5,9 +5,7 @@ metadata:
   name: defend-lumenia-network-policy
   namespace: lumenia
 spec:
-  podSelector:
-    matchLabels:
-      realm: lumenia
+  podSelector: {}
   policyTypes:
     - Ingress
   ingress:

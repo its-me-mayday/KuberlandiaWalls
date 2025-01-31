@@ -1,0 +1,17 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: umbra-spies-network-policy
+  namespace: lumenia
+spec:
+  podSelector:
+    matchLabels:
+      role: scholar
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+      - namespaceSelector:
+          matchLabels:
+            name: umbra
